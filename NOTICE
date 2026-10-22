@@ -1,0 +1,9 @@
+AaaSagent Tools
+Copyright 2026 AaaSagent
+
+This product includes software developed at AaaSagent (https://aaasagent.xyz).
+
+Third-party notes:
+- `deploy/deploy-aaas.sh` invokes Cloudflare Wrangler (Apache-2.0) and expects Node.js (MIT).
+- `rce-scan/run.py` can optionally call an Aliyun Cloud Assistant helper; the tool itself
+  only performs read-only checks and ships no vendor SDK.
