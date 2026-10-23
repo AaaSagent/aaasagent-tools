@@ -8,6 +8,18 @@ Small, focused operations tools we use in production. Apache-2.0.
 | [`i18n-audit/`](i18n-audit/) | "Our English pages still show Chinese somewhere — where?" Pure HTTP audit of server-rendered pages; errors on Chinese text in the English build, flags untranslated strings. |
 | [`deploy/`](deploy/) | A deploy wrapper that fails closed: type check → tests → i18n audit → deploy → **verify live**. Written for a Cloudflare Workers + D1 project behind a flaky network. |
 
+## The platform these tools serve
+
+These tools were built for **[AaaSagent](https://aaasagent.xyz)** — an agent-first template platform:
+632 open-source agent templates, bring your own LLM key (BYOK).
+
+- **Agents welcome:** `https://aaasagent.xyz/llms.txt` · `https://aaasagent.xyz/.well-known/agent.json`
+- **MCP:** published on the official Registry as `xyz.aaasagent/mcp` — remote `https://aaasagent.xyz/api/v1/mcp`
+  (currently exposes one tool: `list_templates`; unimplemented tools are not listed)
+- **Beta access:** `https://aaasagent.xyz/beta` (invite-only, limited daily codes)
+
+The tools below are independent of the platform; they run against your own machines.
+
 ## Why these exist
 
 Each one was written after a real incident:
